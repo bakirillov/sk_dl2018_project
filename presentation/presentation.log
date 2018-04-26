@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017/Debian)  (format=lualatex 2018.1.4)  26 APR 2018 06:33
+This is LuaTeX, Version 1.0.4 (TeX Live 2017/Debian)  (format=lualatex 2018.1.4)  26 APR 2018 06:38
  restricted system commands enabled.
 **presentation.tex
 (./presentation.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.084 seconds
+luaotfload | main : initialization completed in 0.086 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2017/07/13 v3.42 A class for typesetting presentations
@@ -1337,9 +1337,6 @@ Package rerunfilecheck Info: File `presentation.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 )
 
 Here is how much of LuaTeX's memory you used:
@@ -1359,7 +1356,7 @@ texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/font
 s/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-sup
 er/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr
 /share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb>
-Output written on presentation.pdf (9 pages, 2459718 bytes).
+Output written on presentation.pdf (9 pages, 2459716 bytes).
 
 PDF statistics: 289 PDF objects out of 1000 (max. 8388607)
  250 compressed objects within 3 object streams
