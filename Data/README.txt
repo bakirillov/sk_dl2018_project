@@ -1,0 +1,1 @@
+dataverse_files (several zip inside to reduce size of them (Git supports files less then 100 mb)  - from Asgari, Ehsaneddin and Mofrad Mohmmad R.K. "Continuous Distributed Representation of Biological Sequences for Deep Proteomics and Genomics". PloS one (2015)
