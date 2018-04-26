@@ -1,0 +1,4 @@
+family_classification_metadata.tab (text/tab-separated-values) 32989053 bytes.
+family_classification_protVec.csv (text/csv) 245226228 bytes.
+family_classification_sequences.tab (text/tab-separated-values) 138993226 bytes.
+protVec_100d_3grams.csv (text/csv) 8550162 bytes.
