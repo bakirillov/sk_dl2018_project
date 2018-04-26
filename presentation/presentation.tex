@@ -28,10 +28,12 @@
 \usepackage{amsmath}
 
 
+\definecolor{skoltechgreen}{cmyk}{0.07, 0, 0.74, 0.14}
+
 \setbeamerfont{title like}{shape=\scshape}
 \setbeamerfont{frametitle}{shape=\scshape}
 
-\setbeamercolor*{lower separation line head}{bg=green} 
+\setbeamercolor*{lower separation line head}{bg=skoltechgreen} 
 \setbeamercolor*{normal text}{fg=black,bg=white} 
 \setbeamercolor*{alerted text}{fg=red} 
 \setbeamercolor*{example text}{fg=black} 
@@ -64,12 +66,15 @@
 
 \title{\textbf{Vector representation of large DNA and protein strings}}
 \date{
-	\begin{tikzpicture}[decoration=Koch curve type 2] 
-		\draw[green] decorate{ decorate{ decorate{ (0,0) -- (3,0) }}}; 
-	\end{tikzpicture}  
+\vspace{0.5cm}
+\\
+	\begin{tikzpicture}[remember picture, overlay]
+     \node [inner sep=2cm]  at (6)
+     {\includegraphics[height=2cm]{Skoltech-logo.png}};
+  \end{tikzpicture} 
 	\\
-	\vspace{1cm}
-	\today
+	%\vspace{1cm}
+	%\today
 }
 \author{Bogdan Kirillov \and Phan Duc \and Evgenij Baraboshkin}
 \institute{Skolkovo Institute of Science and Technology}
@@ -117,47 +122,59 @@
 \begin{frame}
 	\frametitle{Word embeddings and their use for DNA/Proteins}
 	\begin{figure}
-		\includegraphics[width=\textwidth]{word_embeddings.png}
-		\caption*{\tiny{Example of word embedding}}
+		\includegraphics[width=0.7\textwidth]{embedding.png}
+		\caption*{\tiny{Example of k-mer embedding}}
 	\end{figure}
 \end{frame}
 
 
 \begin{frame}
 	\frametitle{Problem of k-mer length choice}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{kmers.png}
+		\caption*{\tiny{No words in DNA}}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
 	\frametitle{dna2vec training procedure}
+	\begin{enumerate}
+		\item separate genome into long non-overlapping DNA fragments based on gaps;
+		\item convert long DNA fragments into overlapping variable-length k-mers;
+		\item unsupervised training of an aggregate embedding model using a two-layer neural network;
+		\item decompose aggregated model by k-mer lengths.
+	\end{enumerate}
+	
+	\begin{figure}
+		\includegraphics[width=0.6\textwidth]{gap.png}
+		\caption*{\tiny{Example of gap in genome}}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Stage 1: Long non-overlapping DNA fragments}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Stage 2: Overlapping variable-length k-mers}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Stage 3: Two-layer neural network}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Stage 4: Decompose aggregated model by k-mer lengths}
+	\frametitle{Alignment in Bioinformatics}
+	\begin{figure}
+		\includegraphics[width=0.6\textwidth]{NW.png}
+		\caption*{\tiny{Needleman-Wunsch algorithm (Wikipedia)}}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Alignment similarity}
+	\begin{figure}
+		\includegraphics[width=0.8\textwidth]{alignment.png}
+		\caption*{\tiny{Cosine similarity of dna2vec and NW score correlate with r=0.83}}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Possible applications}
+	\begin{figure}
+		\includegraphics[width=0.9\textwidth]{properties.png}
+		\caption*{\tiny{Distribution of physical properties in embedding space (Asgari and Mofrad)}}
+	\end{figure}
 \end{frame}
 
-\begin{frame}
-	\frametitle{What can be improved?}
-\end{frame}
 
 
 \end{document}
